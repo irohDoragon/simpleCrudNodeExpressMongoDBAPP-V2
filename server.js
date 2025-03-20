@@ -69,8 +69,9 @@ MongoClient.connect(connectionString).then(
             res.json(`Deleted Darth Vader's quote`)
             }).catch(error => console.error(error))
         })
+    let PORT = 9001
 
-    app.listen(9001, () => {
+    app.listen(process.env.PORT || PORT, () => {
         console.log('this port is over nine thousnd!')
     })
   })
